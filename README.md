@@ -26,5 +26,6 @@ This project implements a text compression algorithm using C++. The primary goal
 To set up the project on your local machine, follow these steps
 
 1. **Clone the Repository**:
-   https://github.com/sukaransingh123/pp-project.git```bash
+   ``bash
+   https://github.com/sukaransingh123/pp-project.git`
 
