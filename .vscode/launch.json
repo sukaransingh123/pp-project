@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/sukaransingh/Developer/text_compressor-main",
+      "program": "/Users/sukaransingh/Developer/text_compressor-main/build/Debug/outDebug"
+    }
+  ]
+}
