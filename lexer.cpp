@@ -1,22 +1,31 @@
 #include <string>
+#include <tuple>
+#include <cctype>
 #include "compression_map.cpp"
 #define LEXER
 
 using namespace std;
 
-class CaptitalizationProcesor
+class CapitalizationProcessor
 {
 protected:
-  tuple<string, bool> static remove_capitalization(string word)
-  {
-    string new_word = "";
-    for (int i = 0; i < word.length(); i++)
+    static std::tuple<std::string, bool> remove_capitalization(const std::string& word)
     {
-      new_word += tolower(word[i]);
+        std::string new_word;
+        new_word.reserve(word.length()); 
+        bool is_changed = false;
+
+        for (char ch : word)
+        {
+            char lower_ch = std::tolower(ch);
+            new_word += lower_ch;
+            is_changed |= (ch != lower_ch);
+        }
+        
+        return std::make_tuple(new_word, is_changed);
     }
-    return make_tuple(new_word, word != new_word);
-  }
 };
+
 
 class PunctuationProcessor
 {
